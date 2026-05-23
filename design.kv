@@ -1,0 +1,25 @@
+<MenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: "Gérer le Stock"
+            on_release: app.root.current = 'stock'
+        Button:
+            text: "Ventes"
+            on_release: app.root.current = 'sales'
+
+<StockScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            id: prod_name
+            hint_text: "Nom du meuble"
+        Button:
+            text: "Ajouter au stock"
+            on_release: app.add_product(prod_name.text)
+        Button:
+            text: "Retour"
+            on_release: app.root.current = 'menu'
+        Label:
+            id: feedback
+            text: "En attente..."
