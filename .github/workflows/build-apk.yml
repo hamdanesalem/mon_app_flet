@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install dependencies
-        run: pip install flet sqlalchemy matplotlib
+        run: pip install flet
       - name: Build APK
         run: flet build apk
       - name: Upload APK
