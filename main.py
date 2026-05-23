@@ -1,6 +1,9 @@
 import flet as ft
 
 def main(page: ft.Page):
-    page.add(ft.Text("Hello, World!"))
+    page.title = "Test"
+    page.add(
+        ft.Text("L'application fonctionne !", size=30, color="green")
+    )
 
-ft.app(target=main)
+ft.run(main)
